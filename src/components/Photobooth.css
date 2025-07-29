@@ -1,0 +1,141 @@
+.photobooth-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
+
+/* Left 60% */
+.left-section {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Webcam and Photos grouped */
+.webcam-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Webcam Box */
+.webcam-container {
+  width: 320px;
+  height: 240px;
+  border: 5px solid white;
+  overflow: hidden;
+}
+
+.webcam {
+  width: 100%;
+  height: 100%;
+}
+
+/* Countdown Timer */
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Photos Below Webcam */
+.photos-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.photo-box {
+  width: 100px;
+  height: 120px;
+  border: 4px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.6);
+  position: relative;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.retake-btn {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.retake-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Buttons Centered */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background: #ede857;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+  size: 5px;
+  
+}
+
+/* Capture Button */
+.capture-btn {
+  background: #f28dd4;
+}
+
+.capture-btn:hover {
+  background: #d46bb2;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  background: #4caf50;
+}
+
+.confirm-btn:hover {
+  background: #388e3c;
+}
+
+/* Right 40% - Only Video */
+.right-section {
+  width: 40%;
+  height: 100%;
+}
+
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
