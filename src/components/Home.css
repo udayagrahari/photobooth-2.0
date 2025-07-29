@@ -1,133 +1,87 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+/* In src/components/Home.css */
 
 .home-container {
   display: flex;
-  width: 100vw;
+  width: 100%;
+  min-height: 100vh;
+  align-items: top;
+  justify-content: top;
+  background-color: #EBEBEB; /* Your off-white background */
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  display: flex;
+  align-items: top;
+  justify-content: top;
   height: 100vh;
 }
 
-/* Left Section - Text & GIF Background */
-.left-section {
-  width: 60%;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+.left-panel {
   padding: 1rem;
-  color: rgb(91, 5, 65);
-  font-family: "Poppins", sans-serif;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Background GIF */
-.left-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90%;
-  height: 100%;
-  background: url("/bg.gif") no-repeat center center / cover;
-  z-index: -1;
-  filter: brightness(86%); /* Darkens GIF slightly for readability */
+.heart-background {
+  background-image: url('/camera-gif.gif'); /* This uses the heart GIF from your public folder */
+  background-size: 31rem;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 2rem; /* Adjust padding to fit text inside the heart */
+  text-align: center;
+  max-width: 800px;
 }
 
-/* Headings & Paragraphs */
-.left-section h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  font-family: "Playfair Display", serif;
-  margin-bottom: 20px;
+.heart-background h1 {
+  font-family: 'Playfair Display', serif; /* A more elegant font for the title */
+  font-size: 2.5rem;
+  color: #000000;
 }
 
-.left-section p {
+.heart-background p {
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-  max-width: 70%;
+  color: #555;
   line-height: 1.6;
+  margin: 0rem 100;
 }
 
-/* Button Styling */
-.start-btn {
-  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+.heart-background button {
+  background-color: #ff8fab; /* A soft pink button */
   color: white;
-  font-size: 1.3rem;
-  padding: 14px 28px;
   border: none;
-  border-radius: 30px;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.2s ease;
 }
 
-.start-btn:hover {
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  transform: scale(1.1);
-  box-shadow: 0px 4px 10px rgba(255, 120, 140, 0.5);
-}
-.right-section {
-  width: 40%;
-  height: 100vh; /* Make sure it takes full height */
-  background-color: #ffb6c1 !important; /* Ensures the pink background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+.heart-background button:hover {
+  transform: scale(1.05);
 }
 
-/* Polaroid Images */
-.polaroid {
-  width: 160px;
+.right-panel {
+  position: relative; /* Needed for positioning the images */
+  background-color: #ffdde1; /* Pink background for the right side */
+}
+
+.film-strip {
+  width: 200px; /* Adjust size as needed */
   height: auto;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-  position:absolute;
-  transition: transform 0.3s ease-in-out;
-
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  position: absolute; /* Allows precise placement */
 }
 
-.img1 {
-  transform: rotate(-15deg);
-  top: 20%;
-  left: 15%;
-  z-index: 2;
+.film-strip-1 {
+  transform: rotate(-0deg);
+  top: 10%;
+  left: 25%;
 }
 
-.img2 {
-  transform: rotate(15deg);
-  left: 55%;
-  z-index: 1;
-  opacity: 0.9;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .home-container {
-    flex-direction: column;
-  }
-
-  .left-section, .right-section {
-    width: 100%;
-    height: 50%;
-  }
-
-  .left-section {
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
-
-  .left-section h1 {
-    font-size: 2.8rem;
-  }
-
-  .left-section p {
-    font-size: 1.2rem;
-  }
-
-  .polaroid {
-    width: 160px;
-  }
+.film-strip-2 {
+  transform: rotate(0deg);
+  top: 10%;
+  left: 50%;
 }
