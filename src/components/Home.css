@@ -42,7 +42,7 @@
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
-  margin: 0rem 100;
+  margin: 0rem 0; /* Corrected from '100' to '0' */
 }
 
 .heart-background button {
@@ -84,4 +84,58 @@
   transform: rotate(0deg);
   top: 10%;
   left: 50%;
+}
+
+/* ================================================ */
+/* ===== ADD THIS CODE FOR MOBILE RESPONSIVENESS ===== */
+/* ================================================ */
+
+@media (max-width: 768px) {
+  /* Stack the left and right panels on top of each other */
+  .home-container {
+    flex-direction: column;
+  }
+  
+  /* Make both panels take up the full width */
+  .left-panel, .right-panel {
+    width: auto;
+    height: auto; /* Let height be flexible */
+  }
+
+  /* Adjust the heart background for smaller screens */
+  .heart-background {
+    background-size: 60%; /* Make the background image smaller */
+    padding: 0.9rem;
+  }
+  
+  /* Make the title smaller on phones */
+  .heart-background h1 {
+    font-size: 1.3rem;
+  }
+  
+  /* Make the paragraph text smaller */
+  .heart-background p {
+    font-size: 0.6rem;
+  }
+  
+  /* Give the right panel a minimum height so it doesn't collapse */
+  .right-panel {
+    min-height: 300px;
+    order: -1; /* This moves the image panel to the top on mobile */
+  }
+  
+  /* Reposition the film strips for a vertical layout */
+  .film-strip {
+    width: 80px;
+  }
+
+  .film-strip-1 {
+    top: 5%;
+    left: 30%;
+  }
+
+  .film-strip-2 {
+    top: 5%;
+    left: 50%;
+  }
 }
