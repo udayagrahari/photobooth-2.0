@@ -78,45 +78,45 @@
   background: #85acff;
 }
 
-.sepia img {
+.Sepia img {
   filter: sepia(100%) contrast(1.2);
 }
 
-.black-white img {
+.Black-White img {
   filter: grayscale(100%) contrast(1.3);
 }
 
-.warm-retro img {
+.Warm-Retro img {
   filter: sepia(60%) brightness(1.1) contrast(1.2);
 }
 
-.cool-retro img {
+.Cool-Retro img {
   filter: contrast(1.1) brightness(0.9) hue-rotate(180deg);
 }
 
-.grainy-film img {
+.Grainy-Film img {
   filter: contrast(1.2) brightness(0.9) grayscale(20%);
   background: url('https://www.transparenttextures.com/patterns/noise.png');
 }
 
-.lomo img {
+.Lomo img {
   filter: brightness(0.9) contrast(1.3) saturate(1.2);
   border-radius: 5px;
 }
 
-.faded-rose img {
+.Faded img {
   filter: sepia(30%) contrast(0.8) brightness(1.1) hue-rotate(310deg);
 }
 
-.moody-dark img {
+.Moody-Dark img {
   filter: brightness(0.7) contrast(1.4);
 }
 
-.sunkissed img {
+.Sunkissed img {
   filter: brightness(1.2) contrast(1.1) sepia(30%);
 }
 
-.polaroid-faded img {
+.Polaroid-Faded img {
   filter: contrast(0.9) brightness(1.1) sepia(40%);
 }
 
@@ -134,20 +134,20 @@
 }
 .color-button {
   width: 30px;      /* You can make this number bigger or smaller */
-  height: 30px;     /* You can make this number bigger or smaller */
+  height: 40px;     /* You can make this number bigger or smaller */
   border-radius: 50%; /* This makes the button a circle */
-  border: 2px solid #ddd; /* Adds a light border */
+  border: 1px solid #ddd; /* Adds a light border */
   cursor: pointer;
   margin: 4px;      /* Adds some space around each button */
 }
 
 .go-home-button
 {
-  margin-top: 10px;
-  margin-left: 450px;
+  margin-top: 20px;
+  margin-left: 20px;
   padding: 8px 10px;
   border: none;
-  font-size: 12px;
+  font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
