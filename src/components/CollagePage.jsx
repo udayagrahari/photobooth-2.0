@@ -59,7 +59,7 @@ const CollagePage = () => {
       </div>
 
       <div className="customization-options">
-        <p>Customize Your Photo</p>
+        <p>Choose the strip colour!</p>
 
         <div className="color-picker">
           {["#FFFFFF", "#000000", "#FFB6C1", "#FFD700", "#90EE90", "#ADD8E6", "#800080"].map((color) => (
@@ -77,12 +77,12 @@ const CollagePage = () => {
         </label>
 
         <div className="filter-options">
-          <p>Choose a Filter</p>
+          <p>Choose the filter :)</p>
           <div className="filters">
             {[
-              "sepia", "black-white", "warm-retro", "cool-retro",
-              "grainy-film", "lomo", "faded-rose", "moody-dark",
-              "sunkissed", "polaroid-faded"
+              "Sepia", "Black-White", "Warm-Retro", "Cool-Retro",
+              "Grainy-Film", "Lomo", "Faded", "Moody-Dark",
+              "Sunkissed", "Polaroid-Faded"
             ].map((filter) => (
               <button key={filter} className={`filter-btn`} onClick={() => setSelectedFilter(filter)}>
                 {filter.replace("-", " ")}
