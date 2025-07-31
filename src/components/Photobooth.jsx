@@ -502,7 +502,7 @@ const Photobooth = () => {
       <div className="left-section">
         <div className="webcam-photos">
           <div className="webcam-container">
-            <video ref={videoRef} autoPlay className="webcam"></video>
+            <video ref={videoRef} autoPlay playsInline className="webcam"></video>
             <canvas ref={canvasRef} width="320" height="240" hidden></canvas>
             {countdown !== null && <div className="countdown">{countdown}</div>}
           </div>
