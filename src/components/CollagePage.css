@@ -24,6 +24,7 @@
   width: 120px;
   height: auto;
   margin-bottom: 2px;
+  transform: scaleX(-1); /* <-- ADD THIS LINE */
 }
 
 .date-text {
