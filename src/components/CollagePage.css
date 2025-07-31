@@ -155,3 +155,75 @@
   background: #d6309c;
 
 }
+/* ======================================= */
+/* ===== ADD THIS FOR RESPONSIVENESS ===== */
+/* ======================================= */
+
+@media (max-width: 834px) {
+  
+  /* Stack the columns vertically on smaller screens */
+  .collage-container {
+    flex-direction: column;
+    height: auto; /* Allow height to adjust to content */
+    padding: 2em 10rem; /* Add some padding */
+    overflow-y: auto; /* Allow scrolling if needed */
+  }
+/* Add this new rule inside your @media (max-width: 834px) block */
+.collage-frame img {
+  width: 300px; /* You can adjust this value to make it bigger or smaller */
+}
+  /* Reset the panels to take up full width */
+  .customization-panel,
+  .collage-display-area {
+    flex: none; /* Reset flex-grow property */
+    width: 100%;
+    justify-content: center; /* Center content within the panel */
+    padding: 0; /* Reset padding */
+  }
+
+  /* Make the title smaller */
+  .customization-options p {
+    font-size: 2rem;
+  }
+}
+
+/* ===================================== */
+/* ===== iPhone Responsiveness ===== */
+/* ===================================== */
+
+@media (max-width: 480px) {
+  /* Reduce padding on the main container for small screens */
+  .collage-container {
+    padding: 2rem 1rem;
+  }
+
+  /* Make the photo strip smaller to fit the phone width */
+  .collage-frame img {
+    width: 280px; 
+  }
+
+  /* Decrease the title font size */
+  .customization-options p {
+    font-size: 1.5rem;
+  }
+
+  /* Reduce the gap between filter buttons to help them fit */
+  .filters {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  /* Adjust button padding and font size for smaller touch targets */
+  .filter-btn,
+  .go-home-button,
+  .download-button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Make color picker buttons slightly smaller */
+  .color-button {
+    width: 1px;
+    height: 40px;
+  }
+}

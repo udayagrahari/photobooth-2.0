@@ -139,3 +139,119 @@ button {
   object-fit: cover;
   opacity: 100;
 }
+/* In Photobooth.css, add this code BEFORE your phone styles */
+
+/* ================================== */
+/* ===== TABLET RESPONSIVENESS ===== */
+/* ================================== */
+
+@media (max-width: 834px) {
+  /* Stack the layout vertically on tablets */
+  .photobooth-container {
+    flex-direction: column;
+    overflow-y: auto; /* Allow scrolling */
+  }
+
+  /* Make both sections take up the full width */
+  .left-section, .right-section {
+    width: 100%;
+    height: auto;
+  }
+  
+  .left-section {
+    padding: 0px;
+  }
+
+  /* Keep the right section visible on tablets, but give it a fixed height */
+.right-section {
+  display: flex;
+  height: 400px; 
+  order: -1;
+  padding-left: 0px; /* <-- ADD THIS LINE */
+}
+
+.video-bg {
+  object-fit: contain; /* This will prevent the GIF from being cropped */
+}
+  /* Adjust webcam and photo sizes for tablets */
+  .webcam-container {
+    width: auto;
+    max-width: auto;
+  }
+
+
+.countdown {
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem; /* You can adjust the font size */
+}
+  .photos-container {
+    gap: 15px;
+  }
+
+  .photo-box {
+    width: 100px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) { /* More specific breakpoint for phones */
+  
+  /* Stack the main layout vertically */
+  .photobooth-container {
+    flex-direction: column;
+    overflow-y: auto; /* Allow scrolling on small screens */
+  }
+
+  /* Make the main section take up the full width */
+  .left-section {
+    width: 100%;
+    height: auto; /* Allow height to adjust to content */
+    padding: 0px 0px; /* Adjust padding for phone */
+    justify-content: flex-start;
+  }
+
+  /* Hide the decorative video on phones */
+  .right-section {
+    display: none;
+  }
+
+  /* Make the webcam smaller to fit the narrow screen */
+  .webcam-container {
+    width: 100%;
+    max-width: 350px; /* Set a max width */
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+  
+.countdown {
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem; /* You can adjust the font size */
+}
+
+  /* Adjust the photo preview boxes to be smaller */
+  .photos-container {
+    gap: 8px;
+    flex-wrap: wrap; /* Allow boxes to wrap if needed */
+    justify-content: center;
+  }
+
+  .photo-box {
+    width: 80px;
+    height: 100px;
+  }
+
+  /* Adjust buttons for smaller screens */
+  .button-container {
+    margin-top: 25px;
+    margin-bottom: 25px; /* Add space at the bottom */
+  }
+  
+  button {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
